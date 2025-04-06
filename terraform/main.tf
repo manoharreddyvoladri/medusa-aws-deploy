@@ -40,7 +40,7 @@ resource "aws_db_instance" "medusa_db" {
   identifier         = "medusadb"
   allocated_storage  = 20
   engine             = "postgres"
-  engine_version     = "14.1"
+  engine_version     = "14.10"
   instance_class     = "db.t3.micro"
   username           = "medusa"
   password           = "medusapass123"
