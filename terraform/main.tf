@@ -42,7 +42,6 @@ resource "aws_db_instance" "medusa_db" {
   engine             = "postgres"
   engine_version     = "14.1"
   instance_class     = "db.t3.micro"
-  name               = "medusadb"
   username           = "medusa"
   password           = "medusapass123"
   skip_final_snapshot = true
@@ -50,7 +49,6 @@ resource "aws_db_instance" "medusa_db" {
   vpc_security_group_ids = [aws_security_group.ecs_sg.id]
   db_subnet_group_name   = aws_db_subnet_group.db_subnets.name
 }
-
 resource "aws_db_subnet_group" "db_subnets" {
   name       = "medusa-db-subnet-group"
   subnet_ids = [aws_subnet.subnet1.id, aws_subnet.subnet2.id]
