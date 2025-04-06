@@ -54,4 +54,4 @@ resource "aws_db_subnet_group" "db_subnets" {
   subnet_ids = [aws_subnet.subnet1.id, aws_subnet.subnet2.id]
 }
 
-# ECS + Fargate and ALB code will be added in next step
+# ECS + Fargate and ALB code will
