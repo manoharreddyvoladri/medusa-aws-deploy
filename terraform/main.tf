@@ -45,7 +45,7 @@ resource "aws_db_instance" "medusa_db" {
   username           = "medusa"
   password           = "medusapass123"
   skip_final_snapshot = true
-  publicly_accessible = true
+  publicly_accessible = false
   vpc_security_group_ids = [aws_security_group.ecs_sg.id]
   db_subnet_group_name   = aws_db_subnet_group.db_subnets.name
 }
